@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: reserve
+    password: reserve
+    name: reserve
+    url: jdbc:mysql://localhost:3306/reserve?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
