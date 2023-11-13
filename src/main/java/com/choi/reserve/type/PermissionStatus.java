@@ -1,11 +1,16 @@
 package com.choi.reserve.type;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 /**
  * 예약승인 상태
- * : 대기중, 승인, 거절
  */
+@AllArgsConstructor
 public enum PermissionStatus {
-    WAITING,
-    GRANTED,
-    DENIED
+    WAITING("대기중"),
+    GRANTED("승인"),
+    DENIED("거절");
+
+    private String status;
 }
