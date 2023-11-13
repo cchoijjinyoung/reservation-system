@@ -1,7 +1,6 @@
 package com.choi.reserve.type;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 
 /**
  * 예약승인 상태
