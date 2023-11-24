@@ -1,4 +1,4 @@
-package com.choi.reserve.type;
+package com.choi.reserve.contrants;
 
 import lombok.AllArgsConstructor;
 

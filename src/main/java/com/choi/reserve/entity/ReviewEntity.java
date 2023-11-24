@@ -4,6 +4,7 @@ import com.choi.reserve.common.BaseTimeEntity;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "REVIEW")
 public class ReviewEntity extends BaseTimeEntity {
 
     @Id
@@ -21,4 +22,6 @@ public class ReviewEntity extends BaseTimeEntity {
 
     @Column(length = 100)
     private String content;
+
+    private int starPoint;
 }

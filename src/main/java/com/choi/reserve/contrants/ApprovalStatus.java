@@ -1,4 +1,4 @@
-package com.choi.reserve.type;
+package com.choi.reserve.contrants;
 
 import lombok.AllArgsConstructor;
 
@@ -6,10 +6,10 @@ import lombok.AllArgsConstructor;
  * 예약승인 상태
  */
 @AllArgsConstructor
-public enum PermissionStatus {
+public enum ApprovalStatus {
     WAITING("대기중"),
-    GRANTED("승인"),
-    DENIED("거절");
+    APPROVED("승인"),
+    DISAPPROVED("거절");
 
     private String status;
 }

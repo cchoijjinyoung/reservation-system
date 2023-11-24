@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RegisterStoreResponse {
+public class StoreRegisterResponse {
 
     private String name;
 
@@ -20,8 +20,8 @@ public class RegisterStoreResponse {
 
     private String description;
 
-    public static RegisterStoreResponse fromEntity(StoreEntity entity) {
-        return RegisterStoreResponse.builder()
+    public static StoreRegisterResponse fromEntity(StoreEntity entity) {
+        return StoreRegisterResponse.builder()
                 .name(entity.getName())
                 .managerId(entity.getManagerId())
                 .location(entity.getLocation())
