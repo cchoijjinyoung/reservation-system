@@ -34,6 +34,7 @@ public class MemberEntity extends BaseTimeEntity implements UserDetails {
 
     @Enumerated(EnumType.STRING)
     private Role role;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));
