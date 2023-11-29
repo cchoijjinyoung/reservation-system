@@ -1,7 +1,6 @@
 package com.choi.reserve.entity;
 
 import com.choi.reserve.common.BaseTimeEntity;
-import com.choi.reserve.dto.StoreRegisterRequest;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -31,13 +30,4 @@ public class StoreEntity extends BaseTimeEntity {
 
     @Column(length = 100)
     private String description;
-
-    public static StoreEntity fromDto(StoreRegisterRequest dto) {
-        return StoreEntity.builder()
-                .name(dto.getName())
-                .managerId(dto.getManagerId())
-                .location(dto.getLocation())
-                .description(dto.getDescription())
-                .build();
-    }
 }

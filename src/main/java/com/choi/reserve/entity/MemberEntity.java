@@ -20,6 +20,9 @@ public class MemberEntity extends BaseTimeEntity implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    /**
+     * username으로 사용할 것임.
+     */
     @Column(nullable = false, unique = true)
     private String email;
 
@@ -32,7 +35,6 @@ public class MemberEntity extends BaseTimeEntity implements UserDetails {
     @Column(nullable = false, unique = true)
     private String phoneNumber;
 
-    @Enumerated(EnumType.STRING)
     private Role role;
 
     @Override
