@@ -1,15 +1,15 @@
 package com.choi.reserve.entity;
 
 import com.choi.reserve.common.BaseTimeEntity;
-import com.choi.reserve.contrants.ApprovalStatus;
-import com.choi.reserve.contrants.VisitStatus;
+import com.choi.reserve.constants.ApprovalStatus;
+import com.choi.reserve.constants.VisitStatus;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "RESERVATION")
-public class reservationEntity extends BaseTimeEntity {
+public class ReservationEntity extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
