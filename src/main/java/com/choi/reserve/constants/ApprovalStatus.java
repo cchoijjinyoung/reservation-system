@@ -1,4 +1,4 @@
-package com.choi.reserve.contrants;
+package com.choi.reserve.constants;
 
 import lombok.AllArgsConstructor;
 
@@ -11,5 +11,5 @@ public enum ApprovalStatus {
     APPROVED("승인"),
     DISAPPROVED("거절");
 
-    private String status;
+    private final String description;
 }

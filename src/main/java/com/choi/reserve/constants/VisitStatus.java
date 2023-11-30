@@ -1,4 +1,4 @@
-package com.choi.reserve.contrants;
+package com.choi.reserve.constants;
 
 import lombok.AllArgsConstructor;
 
@@ -10,5 +10,5 @@ public enum VisitStatus {
     WAITING("대기 중"),
     COMPLETED("방문 완료");
 
-    private String status;
+    private final String description;
 }

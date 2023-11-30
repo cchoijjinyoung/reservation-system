@@ -1,4 +1,4 @@
-package com.choi.reserve.contrants;
+package com.choi.reserve.constants;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,5 +10,5 @@ public enum Role {
     ROLE_PARTNER("파트너")
     ;
 
-    private String description;
+    private final String description;
 }
