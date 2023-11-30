@@ -3,6 +3,9 @@ package com.choi.reserve.entity;
 import com.choi.reserve.common.BaseTimeEntity;
 import com.choi.reserve.contrants.Role;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,6 +17,9 @@ import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "MEMBER")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class MemberEntity extends BaseTimeEntity implements UserDetails {
 
     @Id

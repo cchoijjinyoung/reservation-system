@@ -25,6 +25,7 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.AccessDeniedHandler;
@@ -40,31 +41,17 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    // private final UserDetailsService userDetailsService;
-
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         log.info("----------configure-----------");
-
-//        AuthenticationManagerBuilder authenticationManagerBuilder =
-//                http.getSharedObject(AuthenticationManagerBuilder.class);
-//
-//        authenticationManagerBuilder
-//                .userDetailsService(withDefaults())
-//                .passwordEncoder(passwordEncoder());
-//
-//        AuthenticationManager authenticationManager = authenticationManagerBuilder.build();
 
         http
                 .formLogin(withDefaults())
                 .csrf(AbstractHttpConfigurer::disable)
 
-                .exceptionHandling(c -> c
-                        .accessDeniedHandler(accessDeniedHandler()))
-
-                .sessionManagement(c -> c
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-//                .authenticationManager(authenticationManager);
+//                .sessionManagement(c -> c
+//                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+        ;
 
         return http.build();
     }
@@ -77,13 +64,13 @@ public class SecurityConfig {
         return (web -> web.ignoring().requestMatchers(PathRequest.toStaticResources().atCommonLocations()));
     }
 
-//    @Bean
-//    public PasswordEncoder passwordEncoder() {
-//        return new BCryptPasswordEncoder();
-//    }
-
     @Bean
     public AccessDeniedHandler accessDeniedHandler() {
         return new CustomAccessDeniedHandler();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return NoOpPasswordEncoder.getInstance();
     }
 }

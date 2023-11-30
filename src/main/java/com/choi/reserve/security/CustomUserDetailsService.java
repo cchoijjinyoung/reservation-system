@@ -25,10 +25,15 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         log.info("loadUserByUsername = {}", username);
 
-        MemberEntity memberEntity = memberRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("username not Found"));
+//        MemberEntity memberEntity = memberRepository.findByEmail(username)
+//                .orElseThrow(() -> new UsernameNotFoundException("username not Found"));
+
+        UserDetails userDetails = User.withUsername("user")
+                .password("1111")
+                .roles("ADMIN", "USER")
+                .build();
 
 
-        return null;
+        return userDetails;
     }
 }

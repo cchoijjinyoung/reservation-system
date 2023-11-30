@@ -1,0 +1,71 @@
+### 회원가입 실패(이메일을 입력하지 않았을 때)
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+{
+  "email": "",
+  "password": "1234",
+  "nickname": "nick1",
+  "phoneNumber": "010-1111-2222",
+  "role": "ROLE_USER"
+}
+
+### 회원가입 실패(패스워드를 입력하지 않았을 때)
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+{
+  "email": "choijinyoung@gmail.com",
+  "password": "",
+  "nickname": "nick1",
+  "phoneNumber": "010-1111-2222",
+  "role": "ROLE_USER"
+}
+
+### 회원가입 실패(닉네임을 입력하지 않았을 때)
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+{
+  "email": "choijinyoung@gmail.com",
+  "password": "1234",
+  "nickname": "",
+  "phoneNumber": "010-1111-2222",
+  "role": "ROLE_USER"
+}
+
+### 회원가입 실패(전화번호를 입력하지 않았을 때)
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+{
+  "email": "choijinyoung@gmail.com",
+  "password": "1234",
+  "nickname": "nick1",
+  "phoneNumber": "",
+  "role": "ROLE_USER"
+}
+
+### 회원가입 성공(회원)
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+{
+  "email": "user1@gmail.com",
+  "password": "1234",
+  "nickname": "nick1",
+  "phoneNumber": "010-1111-2222",
+  "role": "ROLE_USER"
+}
+
+### 회원가입 성공(파트너)
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+{
+  "email": "partner1@gmail.com",
+  "password": "1234",
+  "nickname": "nick1",
+  "phoneNumber": "010-3333-4444",
+  "role": "ROLE_PARTNER"
+}
