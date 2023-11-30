@@ -1,3 +1,15 @@
+### 회원가입 실패(ErrorResponse - validation 체크)
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+{
+  "email": "",
+  "password": "",
+  "nickname": "",
+  "phoneNumber": "",
+  "role": "ROLE_USER"
+}
+
 ### 회원가입 실패(이메일을 입력하지 않았을 때)
 POST http://localhost:8080/signup
 Content-Type: application/json

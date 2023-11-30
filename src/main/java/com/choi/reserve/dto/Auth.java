@@ -1,6 +1,6 @@
 package com.choi.reserve.dto;
 
-import com.choi.reserve.contrants.Role;
+import com.choi.reserve.constants.Role;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
