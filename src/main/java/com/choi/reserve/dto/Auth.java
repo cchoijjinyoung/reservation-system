@@ -3,11 +3,13 @@ package com.choi.reserve.dto;
 import com.choi.reserve.constants.Role;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lombok.Builder;
 import lombok.Getter;
 
 public class Auth {
 
     @Getter
+    @Builder
     public static class SignUp {
 
         @NotBlank(message = "이메일을 입력해주세요.")
@@ -27,6 +29,7 @@ public class Auth {
     }
 
     @Getter
+    @Builder
     public static class SignIn {
         private String username;
         private String password;

@@ -5,7 +5,6 @@ import com.choi.reserve.dto.SignupResponseDto;
 import com.choi.reserve.entity.MemberEntity;
 import com.choi.reserve.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service

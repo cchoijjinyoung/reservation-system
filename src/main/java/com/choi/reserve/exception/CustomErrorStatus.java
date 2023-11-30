@@ -1,10 +1,9 @@
 package com.choi.reserve.exception;
 
-import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import static jakarta.servlet.http.HttpServletResponse.*;
+import static jakarta.servlet.http.HttpServletResponse.SC_NOT_FOUND;
 
 @AllArgsConstructor
 @Getter

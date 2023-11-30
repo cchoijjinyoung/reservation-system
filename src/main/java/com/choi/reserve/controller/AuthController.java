@@ -3,8 +3,6 @@ package com.choi.reserve.controller;
 import com.choi.reserve.dto.Auth;
 import com.choi.reserve.dto.SignupResponseDto;
 import com.choi.reserve.service.MemberService;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

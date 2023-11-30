@@ -1,6 +1,7 @@
 package com.choi.reserve.exception;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +13,7 @@ public class ErrorResponse {
 
     private final String message;
 
+    // TODO: refactoring
     private final Map<String, String> validation = new HashMap<>();
 
     @Builder

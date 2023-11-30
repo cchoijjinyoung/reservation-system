@@ -1,6 +1,5 @@
 package com.choi.reserve.exception;
 
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -9,7 +8,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import static jakarta.servlet.http.HttpServletResponse.*;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -18,7 +16,7 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorResponse invalidRequestHandler(MethodArgumentNotValidException e) {
         ErrorResponse response = ErrorResponse.builder()
-                .code(SC_BAD_REQUEST)
+                .code(HttpStatus.BAD_REQUEST.value())
                 .message("잘못된 요청입니다.")
                 .build();
 
