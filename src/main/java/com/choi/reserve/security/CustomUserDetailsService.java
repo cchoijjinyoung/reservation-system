@@ -1,5 +1,6 @@
 package com.choi.reserve.security;
 
+import com.choi.reserve.entity.MemberEntity;
 import com.choi.reserve.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,8 +21,8 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         log.info("loadUserByUsername = {}", username);
 
-//        MemberEntity memberEntity = memberRepository.findByEmail(username)
-//                .orElseThrow(() -> new UsernameNotFoundException("username not Found"));
+        MemberEntity memberEntity = memberRepository.findByEmail(username)
+                .orElseThrow(() -> new UsernameNotFoundException("username not Found"));
 
         UserDetails userDetails = User.withUsername("user")
                 .password("1111")

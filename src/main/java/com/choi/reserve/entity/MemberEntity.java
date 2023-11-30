@@ -36,7 +36,7 @@ public class MemberEntity extends BaseTimeEntity implements UserDetails {
     @Column(nullable = false)
     private String nickname;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String phoneNumber;
 
     private Role role;
